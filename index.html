@@ -1,0 +1,463 @@
+    <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ascend</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  	<link rel ="shortcut icon" type="image/png" href="images/new.png">
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <link rel="stylesheet" href="css/JiSlider.css">
+    <script>
+      var current=0;
+        $(function() {
+          $.scrollify({
+            section:".panel",
+            scrollbars:false,
+            scrollSpeed: 1500,
+
+            before: function(){
+                  $('.menu li a').removeClass('active')
+                  current = $.scrollify.currentIndex();
+                  if(current == 0){
+                    $(".menu li  a[href$='#home']").addClass('active');
+                    $('#logo1 div').removeClass('logocontact');
+                    $('#logo1 div').removeClass('nk3');
+                    $('#logo1 div').addClass('logo');
+                    $('#prev').removeClass('at-end');
+                    $('#prev').addClass('at-start');
+                    $('#next').removeClass('at-end');
+                    $('#next').addClass('at-start');
+                  }
+                else if (current == 1) {
+                      $(".menu li  a[href$='#About']").addClass('active');
+                      $('#logo1 div').removeClass('logocontact');
+                      $('#logo1 div').removeClass('logo');
+                      $('#logo1 div').addClass('nk3');
+                      $('#next').removeClass('at-end');
+                      $('#next').addClass('at-start');
+                      $('#prev').removeClass('at-start');
+                      $('#prev').removeClass('at-end');
+                }
+
+                else if (current == 2) {
+                      $(".menu li  a[href$='#Getstarted']").addClass('active');
+                      $('#logo1 div').removeClass('logo');
+                      $('#logo1 div').removeClass('logocontact');
+                      $('#logo1 div').addClass('nk3');
+                      $('#next').removeClass('at-end');
+                      $('#next').addClass('at-start');
+                      $('#prev').removeClass('at-start');
+                      $('#prev').removeClass('at-end');
+
+                }
+                else if (current == 3) {
+                  $(".menu li  a[href$='#contact']").addClass('active');
+                  $('#logo1 div').removeClass('logo');
+                  $('#logo1 div').removeClass('nk3');
+                  $('#logo1 div').addClass('logocontact');
+                  $('#next').removeClass('at-start');
+                  $('#next').addClass('at-end');
+                  $('#prev').removeClass('at-start');
+                  $('#prev').removeClass('at-end');
+                  $('#prev').addClass('at-end');
+                }
+              },
+                after:function(){
+                }
+          });
+         });
+          $(document).ready(function(){
+            $("#next").click(function(){
+              if (current == 4) {
+                $.scrollify.previous();
+              }
+              else {
+                $.scrollify.next();
+              }
+            });
+            $("#prev").click(function(){
+              $.scrollify.previous();
+            });
+            $("#link1").click(function(e){
+                 $.scrollify.move(0);
+             });
+             $("#link2").click(function(e){
+
+                 $.scrollify.move(1);
+             });
+             $("#link3").click(function(e){
+
+                 $.scrollify.move(2);
+             });
+             $("#link4").click(function(e){
+
+                 $.scrollify.move(3);
+             });
+             $("#link44").click(function(e){
+
+                 $.scrollify.move(4);
+             });
+             $("#link22").click(function(e){
+
+                 $.scrollify.move(0);
+             });
+             $("#link111").click(function(e){
+
+                 $.scrollify.move(0);
+             });
+             $("#link222").click(function(e){
+
+                 $.scrollify.move(1);
+             });
+             $("#link333").click(function(e){
+
+                 $.scrollify.move(2);
+             });
+             $("#link444").click(function(e){
+
+                 $.scrollify.move(3);
+             });
+             $("#link444 .at-end").click(function(e){
+
+                 $.scrollify.move(2);
+             });
+          });
+    </script>
+    <script>
+      function myFunction() {
+      	$('body').addClass('loaded');
+            $('loader').css("display:none;");
+      }
+    </script>
+  </head>
+  <body onload="myFunction()">
+    <div id="loader-wrapper">
+			<div id="loader"></div>
+			<div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+		</div>
+    <section class="panel home" data-section-name="home">
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/close.svg" /></a>
+        <div class="overlay-content">
+          <a href="#home" id="link22" onclick="closeNav()">Home</a>
+          <a href="#" onclick="closeNav()" >Gallery</a>
+          <a href="#" onclick="closeNav()">Events</a>
+          <a id="link44" onclick="closeNav()" href="#contact">Contact</a>
+        </div>
+      </div>
+      <img onclick="openNav()" class="menuicon" src="images/menu.svg"/>
+      <a href="" id="logo1" ><div class="logo"><img id="logoimg"  class="logoimg" src="images/new.png"></div></a>
+      <img class="gith" src="images/anims/gith.png" />
+      <img class="unity" src="images/anims/unity.png" />
+      <img class="python" src="images/anims/python.png" />
+      <img class="visual" src="images/anims/visual.png" />
+    <!--  <img class="clouds2" src="images/home/clouds1.png" /> -->
+      <a href="" id=""><img class="fac" src="images/face.svg"></a>
+      <a href="https://www.instagram.com/vardevsolutions/" id=""><img class="ins" src="images/insta.svg"></a>
+      <div class="top-register">
+        <div class="reg-button"><a href="#">Gallery</a></div>
+        <div class="reg-button"><a href="#">Events</a></div>
+      </div>
+
+      <span id="prev" class="at-start"><img src="images/section/arrow_right.svg"></span>
+      <span id="next"><img src="images/section/arrow_right.svg"></span>
+      <ul class="menu">
+        <li >
+          <a id="link1" href="#home" class="active"><span class="list">HOME</span></a>
+        </li>
+        <li >
+          <a id="link2" href="#About"><span class="list">ABOUT US</span></a>
+        </li>
+        <li >
+          <a id="link3" href="#Getstarted"><span class="list">GET STARTED</span></a>
+        </li>
+        <li >
+          <a id="link4" href="#contact"><span class="list">CONTACT US</span></a>
+        </li>
+      </ul>
+      <div class="inner">
+        <div id="particles-js"></div>
+        <div class="date">
+
+          <h3>09-10</h3>
+          <h2>AUG</h2>
+          <h4>2K19</h4>
+        </div>
+      </div>
+    </section>
+    <section class="panel about" data-section-name="About">
+      <div class="inner">
+        <img class="eye" src="images/eye.png"/>
+        <div class="center">
+          <h1>About us</h1>
+          <p>The Department of Computer Science under the banner of EXCEL proudly presents, ASCEND 2019, a national level technical fest to inspire hunger computer science geeks, and provide them a platform to show their excellence and talent in the technical field, is to be held on 9th and 10th of August. From its very first installment, ASCEND has set new benchmarks on the level of technical excellence on display every year. Always true to the standards, over the years ASCEND has accumulated such prestige that only few other fests in South India can boast of.</p>
+          <p> The newest instance promises to be even bigger and better. With the theme Autarquico, this year’s Ascend aims to highlight today’s autonomous world and move towards the future. This extravaganza unfolds to you a two-day mega event full of merry and rapture. Get enlightened on the redefining moments of technological brilliance.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="panel Getstarted" data-section-name="Getstarted">
+      <div class="inner">
+
+        <div class="container">
+          <a href="#"><button class="btn"><span>Events</span></button></a>
+          <a href="#"><button class="btn" id="btn"><span>Gallery</span></button></a>
+        </div>
+      </div>
+    </section>
+    <section class="panel contact" data-section-name="contact">
+      <div class="inner">
+          <div id="right" class="righ">
+            <h1 style="font-size:1em;top:20px;">The miracles of science.</h1>
+          </div>
+          <div class="uppercase">
+            <div class="title">LINKS</div>
+            <table class="fm">
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="#">Register</a>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="link111" href="#home">Home</a>
+                  </td>
+                  <td>
+                    <a id="link222" href="#about">About US</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a id="link333" href="#Getstarted">Get Started</a>
+                  </td>
+                  <td>
+                    <a id="link444" href="#contact">Contact us</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#">Events</a>
+                  </td>
+                  <td>
+                    <a href="#">Gallery</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="follow-uppercase">
+            <div class="title">FOLLOW US</div>
+            <table class="fm">
+              <tbody>
+                <tr>
+                  <td>
+                    <a target="_blank" href="https://www.facebook.com/">Facebook</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a target="_blank" href="https://www.instagram.com/vardevsolutions/">Instagram</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a target="_blank" href="https://www.vardevsolutions.com">Vardevsolutions</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="https://www.freepik.com/free-photos-vectors/background" style="display:none;">Background photo created by luis_molinero - www.freepik.com</a>
+          <footer class="foot"><h1>Designed and Developed By Vardevsolutions</h1></footer>
+      </div>
+    </section>
+  </body>
+</html>
+<script  src="js/particle.js"></script>
+<script src="js/jquery.scrollify.js"></script>
+<script>
+  function openSlideMenu(){
+    document.getElementById('side-menu').style.width = '250px';
+    document.getElementById('main').style.marginLeft = '250px';
+  }
+
+  function closeSlideMenu(){
+    document.getElementById('side-menu').style.width = '0';
+    document.getElementById('main').style.marginLeft = '0';
+  }
+</script>
+<script>
+  $(function() {
+    $(".panel").css({"height":$(window).height()});
+    $.scrollify({
+      section:".panel"
+    });
+    $(".scroll").click(function(e) {
+      e.preventDefault();
+      $.scrollify("move",$(this).attr("href"));
+    });
+  });
+</script>
+<script type="text/javascript">
+  var jack =$('.visual');
+  $(document).mousemove(function(event){
+    var valueX =(event.pageX * -1/30);
+    var valueY =(event.pageY * -1/30);
+    jack.css({
+      'transform':'translate3d('+valueX+'px,'+valueY+'px,0px)'
+    });
+  });
+   var unity =$('.unity');
+  $(document).mousemove(function(event){
+    var valueX =(event.pageX * -1/110);
+    var valueY =(event.pageY * -1/110);
+    unity.css({
+      'transform':'translate3d('+valueX+'px,'+valueY+'px,0px)'
+    });
+  });
+  var python =$('.python');
+  $(document).mousemove(function(event){
+    var valueX =(event.pageX * -1/20);
+    var valueY =(event.pageY * -1/20);
+    python.css({
+      'transform':'translate3d('+valueX+'px,'+valueY+'px,0px)'
+    });
+  });
+  var gith =$('.gith');
+  $(document).mousemove(function(event){
+    var valueX =(event.pageX * -1/80);
+    var valueY =(event.pageY * -1/80);
+    gith.css({
+      'transform':'translate3d('+valueX+'px,'+valueY+'px,0px)'
+    });
+  });
+</script>
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 380,
+        "density": {
+          "enable": true,
+          "value_area": 1000
+        }
+      },
+      "color": {
+        "value": "#fff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 1,
+        "random": true,
+        "anim": {
+          "enable": true,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 1.9,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 50,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": false,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 0.3,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": true,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "bubble"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 30,
+          "size": 1.5,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
